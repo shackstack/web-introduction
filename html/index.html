@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeremy's Profile</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
   </head>
   <body>
     <div>
@@ -20,20 +25,23 @@
           Address : JAMSIL DAEKYO BOOKDAN
         </ul>
       </div>
+      <h4 class="movieTitle">Best Movie Top5</h4>
       <div class="tableDiv">
-        <h2>Best Movie Top5</h2>
         <table class="table">
           <th>순위</th>
           <th>제목</th>
-          <th>포스터</th>
+          <th>별점</th>
           <th>링크</th>
           <tr>
             <!--첫번째 줄 시작-->
             <td>1</td>
-            <td>Pulp Fiction</td>
             <td>
-              <img class="poster" src="../images/펄프픽션.jpg" />
+              <div class="poster">
+                <img class="hoverImage" src="../images/펄프픽션.jpg" />
+                Pulp Fiction
+              </div>
             </td>
+            <td>⭐⭐⭐⭐⭐</td>
             <td>
               <a
                 href="https://movie.naver.com/movie/bi/mi/basic.naver?code=16571#"
@@ -43,25 +51,14 @@
           </tr>
           <tr>
             <!--두번째 줄 시작-->
-            <td>2</td>
-            <td>DUNE</td>
-            <td>
-              <img class="poster" src="../images/듄.jpg" />
-            </td>
-            <td>
-              <a
-                href="https://movie.naver.com/movie/bi/mi/basic.naver?code=191559"
-                >바로가기</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <!--세번째 줄 시작-->
             <td>3</td>
-            <td>Inglourious Basterds</td>
             <td>
-              <img class="poster" src="../images/바스터즈.jpg" />
+              <div class="poster">
+                <img class="hoverImage" src="../images/바스터즈.jpg" />
+                Inglourious Basterds
+              </div>
             </td>
+            <td>⭐⭐⭐⭐⭐</td>
             <td>
               <a
                 href="https://movie.naver.com/movie/bi/mi/basic.naver?code=52245"
@@ -70,12 +67,32 @@
             </td>
           </tr>
           <tr>
+            <!--세번째 줄 시작-->
+            <td>2</td>
+            <td>
+              <div class="poster">
+                <img class="hoverImage" src="../images/듄.jpg" />
+                DUNE
+              </div>
+            </td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>
+              <a
+                href="https://movie.naver.com/movie/bi/mi/basic.naver?code=191559"
+                >바로가기</a
+              >
+            </td>
+          </tr>
+          <tr>
             <!--네번째 줄 시작-->
             <td>4</td>
-            <td>TENET</td>
             <td>
-              <img class="poster" src="../images/테넷.jpg" />
+              <div class="poster">
+                <img class="hoverImage" src="../images/테넷.jpg" />
+                TENET
+              </div>
             </td>
+            <td>⭐⭐⭐⭐</td>
             <td>
               <a
                 href="https://movie.naver.com/movie/bi/mi/basic.naver?code=190010"
@@ -86,10 +103,13 @@
           <tr>
             <!--다섯번째 줄 시작-->
             <td>5</td>
-            <td>Midnight in Paris</td>
             <td>
-              <img class="poster" src="../images/미드나잇 인 파리.jpg" />
+              <div class="poster">
+                <img class="hoverImage" src="../images/미드나잇 인 파리.jpg" />
+                Midnight in Paris
+              </div>
             </td>
+            <td>⭐⭐⭐⭐</td>
             <td>
               <a
                 href="https://movie.naver.com/movie/bi/mi/basic.naver?code=74610"
@@ -101,20 +121,55 @@
       </div>
       <div class="방명록감싸는거">
         <div class="방명록">
-          <div>
-            <input type="radio" name="movie" /> Pulp Fiction
-            <input type="radio" name="movie" /> DUNE
-            <input type="radio" name="movie" /> Inglourious Basterds
-            <input type="radio" name="movie" /> TENET
-            <input type="radio" name="movie" /> Midnight in Paris
+          <div class="buttons">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Choose Movie
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Pulp Fiction </a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Inglourious Basterds</a>
+                </li>
+                <li><a class="dropdown-item" href="#">DUNE</a></li>
+                <li><a class="dropdown-item" href="#">TENET</a></li>
+                <li><a class="dropdown-item" href="#">Midnight in Paris</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Rate
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">⭐</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">⭐⭐</a>
+                </li>
+                <li><a class="dropdown-item" href="#">⭐⭐⭐</a></li>
+                <li><a class="dropdown-item" href="#">⭐⭐⭐⭐</a></li>
+                <li><a class="dropdown-item" href="#">⭐⭐⭐⭐⭐</a></li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <input class="방명록인풋" />
-            <button>방명록 작성</button>
-            <button>취소</button>
+          <input class="form-control" />
+          <div class="buttons">
+            <button class="btn btn-secondary">코멘트 작성</button>
+            <button class="btn btn-secondary">취소</button>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
   </body>
 </html>
